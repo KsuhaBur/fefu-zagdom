@@ -23,6 +23,7 @@
     <body>
         <div class="hello-world">
             <h1>Hello, world!</h1>
+            <h2>hi</h2>
         </div>
         <script type="text/javascript" src="/js/app.js"></script>
     </body>
