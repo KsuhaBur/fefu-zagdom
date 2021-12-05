@@ -1,6 +1,10 @@
-{% macro content(scope) %}
-    {% import _self as macros %}
+{% import _self as macros %}
 
+{% set scope = {
+    items: items ?? [],
+} %}
+
+{% macro content(scope) %}
     <div class="Slider swiper" data-swiper>
         <div class="swiper-wrapper">
             {% for item in scope.items %}
@@ -19,6 +23,7 @@
 {{ macros.content(scope) }}
 
 {% macro slide(data) %}
+
     {% set data = {
         desktopImage: data.desktopImage ?? '',
         mobileImage: data.mobileImage ?? '',
@@ -37,7 +42,7 @@
                 {{ data.title|raw }}
             </h2>
             <p class="Slide__text">
-                {{ data.text }}
+                {{ data.text|raw }}
             </p>
         </div>
     </div>

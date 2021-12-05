@@ -17,8 +17,8 @@
         {
             desktopImage: 'images/mockup/slides/slider-desktop.png'|asset,
             mobileImage: 'images/mockup/slides/slider-mobile.png'|asset,
-            title: 'Как принято считать, сделанные на базе интернет-аналитики выводы,',
-            text: ', которые представляют собой яркий пример континентально-европейского типа политической культуры',
+            title: 'Как принято считать',
+            text: 'которые представляют собой яркий пример континентально-европейского',
         },
     ],
     featuredSection: {
@@ -35,14 +35,13 @@
                 title: '14 лет',
                 text: 'мы на рынке загородного строительства',
             },
-        ]
+        ],
     }
 } %}
 
 {% block main %}
     <div class="Container">
         <div class="Layout__section Layout__section--slider">
-{#            {{ dump(scope) }}#}
             {% include '@components/slider/slider.twig' with {
                 items: scope.slides,
             } %}
@@ -50,7 +49,9 @@
 
         <div class="Layout__section Layout__section--featured">
             {% include '@components/featured-section/featured-section.twig' with {
-                items: scope.featuredSection,
+                title: scope.featuredSection.title,
+                text: scope.featuredSection.text,
+                items: scope.featuredSection.items,
             } %}
         </div>
     </div>
