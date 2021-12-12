@@ -23,7 +23,7 @@ $font-weight-bold: 700;
 @import "./swiper.scss";
 @import "../components/header/header.scss";
 @import "../components/site-nav/site-nav.scss";
-@import "../components/contacts/contacts.scss";
+@import "../components/contacts-nav/contacts-nav.scss";
 @import "../components/slider/slider.scss";
 @import "../components/featured-section/featured-section.scss";
 @import "../components/projects-section/projects-section.scss";
@@ -34,3 +34,4 @@ $font-weight-bold: 700;
 @import "../components/pagination/pagination.scss";
 
 @import "./news.scss";
+@import "./contacts.scss";
